@@ -14,7 +14,7 @@ namespace IwachuCRA
 {
     public partial class RecoverPasswordForm : Form
     {
-        string connectionString = GlobalVariablesClass.connString;
+       
         public RecoverPasswordForm()
         {
             InitializeComponent();
@@ -23,101 +23,117 @@ namespace IwachuCRA
         private void recoverPassBtn_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            bool checkUser = false;
-            if (recoverPasswordBox.Text.Equals("")) 
+            //check system settings
+            GlobalVariablesClass.system_ip  = Properties.Settings.Default.system_ip;
+            GlobalVariablesClass.system_db  = Properties.Settings.Default.system_db;
+            GlobalVariablesClass.db_pass    = Properties.Settings.Default.db_pass;
+            GlobalVariablesClass.db_user    = Properties.Settings.Default.db_user;
+            GlobalVariablesClass.connString = "Server=" + GlobalVariablesClass.system_ip + ";Database=" + GlobalVariablesClass.system_db + ";Uid=" + GlobalVariablesClass.db_user + ";Pwd=" + GlobalVariablesClass.db_pass;
+            if (GlobalVariablesClass.system_ip == "" || GlobalVariablesClass.system_db == "" || GlobalVariablesClass.db_pass == "" || GlobalVariablesClass.db_user == "")
             {
-                MessageBox.Show("Weka Barua pepe yako");
+                MessageBox.Show("Mpangilio wa mfumo hauko sawa, huwezi kuingia kwa sasa!");
             }
             else
             {
-                //checking if user with email provided is availabe
-                MySql.Data.MySqlClient.MySqlConnection connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
-                connection.Open();
-                try
+                string connectionString = GlobalVariablesClass.connString;
+                bool checkUser = false;
+                if (recoverPasswordBox.Text.Equals(""))
                 {
-                    MySql.Data.MySqlClient.MySqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandText = "SELECT * FROM users WHERE email = '" + recoverPasswordBox.Text + "' AND status='active' LIMIT 1";
-                    MySql.Data.MySqlClient.MySqlDataReader myReader     = cmd.ExecuteReader();
-                    if (myReader.HasRows)
-                    {
-                        checkUser = true;
-                    }
-                    else
-                    {
-                        checkUser = false;
-                    }
-
+                    MessageBox.Show("Weka Barua pepe yako");
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    if (connection.State == ConnectionState.Open)
-                    {
-                        connection.Close();
-                    }
-                }
-
-                if (!checkUser)
-                {
-                    MessageBox.Show("Umekosea barua pepe au hakuna mtumiaji mwenye barua pepe uliyoweka");
-                }
-                else 
-                {
+                    //checking if user with email provided is availabe
+                    MySql.Data.MySqlClient.MySqlConnection connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
                     connection.Open();
-                    //updating user password
                     try
                     {
-                        MySql.Data.MySqlClient.MySqlCommand cmd2 = connection.CreateCommand();
-                        cmd2.CommandText = "UPDATE users SET password = '" + Md5Hash("123456tz") + "' WHERE email = '" + recoverPasswordBox.Text + "'";
-                        cmd2.ExecuteNonQuery();
-                        //processing send email if user is available
-                        try
+                        MySql.Data.MySqlClient.MySqlCommand cmd = connection.CreateCommand();
+                        cmd.CommandText = "SELECT * FROM users WHERE email = '" + recoverPasswordBox.Text + "' AND status='active' LIMIT 1";
+                        MySql.Data.MySqlClient.MySqlDataReader myReader = cmd.ExecuteReader();
+                        if (myReader.HasRows)
                         {
-                            string fromAddress              = "bedabudida@gmail.com";
-                            string mailPassword             = "010686@janda";       // Mail id password from where mail will be sent.
-                            string messageBody              = "Nywila yako mpya ni: 123456tz";
-                            // Create smtp connection.
-                            SmtpClient client               = new SmtpClient();
-                            client.Port                     = 587; //outgoing port for the mail.
-                            client.Host                     = "smtp.gmail.com";
-                            client.EnableSsl                = true;
-                            client.Timeout                  = 10000;
-                            client.DeliveryMethod           = SmtpDeliveryMethod.Network;
-                            client.UseDefaultCredentials    = false;
-                            client.Credentials              = new System.Net.NetworkCredential(fromAddress, mailPassword);
-                            // Fill the mail form.
-                            var send_mail                   = new MailMessage();
-                            send_mail.IsBodyHtml            = true;
-                            //address from where mail will be sent.
-                            send_mail.From                  = new MailAddress("info@iwachu.co.tz");
-                            //address to which mail will be sent.           
-                            send_mail.To.Add(new MailAddress(recoverPasswordBox.Text));
-                            //subject of the mail.
-                            send_mail.Subject   = "Iwachu CRA Nywila Mpya";
-                            send_mail.Body      = messageBody;
-                            client.Send(send_mail);
-                            MessageBox.Show("Ujumbe wenye nywila mpya umetumwa!");
+                            checkUser = true;
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show(ex.Message);
+                            checkUser = false;
                         }
+
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
                     }
-                    finally {
+                    finally
+                    {
                         if (connection.State == ConnectionState.Open)
                         {
                             connection.Close();
                         }
                     }
+
+                    if (!checkUser)
+                    {
+                        MessageBox.Show("Umekosea barua pepe au hakuna mtumiaji mwenye barua pepe uliyoweka");
+                    }
+                    else
+                    {
+                        connection.Open();
+                        //updating user password
+                        try
+                        {
+                            MySql.Data.MySqlClient.MySqlCommand cmd2 = connection.CreateCommand();
+                            cmd2.CommandText = "UPDATE users SET password = '" + Md5Hash("123456tz") + "' WHERE email = '" + recoverPasswordBox.Text + "'";
+                            cmd2.ExecuteNonQuery();
+                            //processing send email if user is available
+                            try
+                            {
+                                string fromAddress = "bedabudida@gmail.com";
+                                string mailPassword = "010686@janda";       // Mail id password from where mail will be sent.
+                                string messageBody = "Nywila yako mpya ni: 123456tz";
+                                // Create smtp connection.
+                                SmtpClient client = new SmtpClient();
+                                client.Port = 587; //outgoing port for the mail.
+                                client.Host = "smtp.gmail.com";
+                                client.EnableSsl = true;
+                                client.Timeout = 10000;
+                                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                                client.UseDefaultCredentials = false;
+                                client.Credentials = new System.Net.NetworkCredential(fromAddress, mailPassword);
+                                // Fill the mail form.
+                                var send_mail = new MailMessage();
+                                send_mail.IsBodyHtml = true;
+                                //address from where mail will be sent.
+                                send_mail.From = new MailAddress("info@iwachu.co.tz");
+                                //address to which mail will be sent.           
+                                send_mail.To.Add(new MailAddress(recoverPasswordBox.Text));
+                                //subject of the mail.
+                                send_mail.Subject = "Iwachu CRA Nywila Mpya";
+                                send_mail.Body = messageBody;
+                                client.Send(send_mail);
+                                MessageBox.Show("Ujumbe wenye nywila mpya umetumwa!");
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            if (connection.State == ConnectionState.Open)
+                            {
+                                connection.Close();
+                            }
+                        }
+                    }
                 }
             }
+            
             Cursor.Current = Cursors.Default;
         }
 

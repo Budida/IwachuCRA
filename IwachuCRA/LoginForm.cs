@@ -38,10 +38,10 @@ namespace IwachuCRA
         {
             Cursor.Current = Cursors.WaitCursor;
             //check system settings
-            GlobalVariablesClass.system_ip = Properties.Settings.Default.system_ip;
-            GlobalVariablesClass.system_db = Properties.Settings.Default.system_db;
-            GlobalVariablesClass.db_pass = Properties.Settings.Default.db_pass;
-            GlobalVariablesClass.db_user = Properties.Settings.Default.db_user;
+            GlobalVariablesClass.system_ip  = Properties.Settings.Default.system_ip;
+            GlobalVariablesClass.system_db  = Properties.Settings.Default.system_db;
+            GlobalVariablesClass.db_pass    = Properties.Settings.Default.db_pass;
+            GlobalVariablesClass.db_user    = Properties.Settings.Default.db_user;
             GlobalVariablesClass.connString = "Server=" + GlobalVariablesClass.system_ip + ";Database=" + GlobalVariablesClass.system_db + ";Uid=" + GlobalVariablesClass.db_user + ";Pwd=" + GlobalVariablesClass.db_pass;
             //MessageBox.Show(GlobalVariablesClass.system_ip+"--"+ GlobalVariablesClass.system_db+"--"+ GlobalVariablesClass.db_pass+"--"+ GlobalVariablesClass.db_user+"==="+GlobalVariablesClass.connString);
             if (GlobalVariablesClass.system_ip == "" || GlobalVariablesClass.system_db == "" || GlobalVariablesClass.db_pass == "" || GlobalVariablesClass.db_user == "")
