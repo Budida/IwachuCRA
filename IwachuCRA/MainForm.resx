@@ -1,0 +1,909 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="copyRightLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="copyRightLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="copyRightLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="copyRightLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 444</value>
+  </data>
+  <data name="copyRightLabel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 8, 0, 8</value>
+  </data>
+  <data name="copyRightLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>799, 33</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="copyRightLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="copyRightLabel.Text" xml:space="preserve">
+    <value>iCRA | © Iwachu Company Limited</value>
+  </data>
+  <data name="copyRightLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;copyRightLabel.Name" xml:space="preserve">
+    <value>copyRightLabel</value>
+  </data>
+  <data name="&gt;&gt;copyRightLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyRightLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;copyRightLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="BottomToolStripPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="BottomToolStripPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;BottomToolStripPanel.Name" xml:space="preserve">
+    <value>BottomToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;BottomToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TopToolStripPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TopToolStripPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;TopToolStripPanel.Name" xml:space="preserve">
+    <value>TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;TopToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RightToolStripPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="RightToolStripPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;RightToolStripPanel.Name" xml:space="preserve">
+    <value>RightToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;RightToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LeftToolStripPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="LeftToolStripPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;LeftToolStripPanel.Name" xml:space="preserve">
+    <value>LeftToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;LeftToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ContentPanel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>782, 441</value>
+  </data>
+  <data name="&gt;&gt;ContentPanel.Name" xml:space="preserve">
+    <value>ContentPanel</value>
+  </data>
+  <data name="&gt;&gt;ContentPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripContentPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="mainMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="sajiliKataMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="sajiliKataMenu.Text" xml:space="preserve">
+    <value>Sajili Kata</value>
+  </data>
+  <data name="sajiliMtaaKijijiMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="sajiliMtaaKijijiMenu.Text" xml:space="preserve">
+    <value>Sajili Mtaa/Kijiji</value>
+  </data>
+  <data name="wekaVyanzoMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="wekaVyanzoMenu.Text" xml:space="preserve">
+    <value>Sajili Vyanzo</value>
+  </data>
+  <data name="wekaMaeneoMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="wekaMaeneoMenu.Text" xml:space="preserve">
+    <value>Sajili Maeneo</value>
+  </data>
+  <data name="sajiliWakalaMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="sajiliWakalaMenu.Text" xml:space="preserve">
+    <value>Sajili Wakala</value>
+  </data>
+  <data name="sajiliMlipaKodiMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="sajiliMlipaKodiMenu.Text" xml:space="preserve">
+    <value>Sajili Mlipa Kodi</value>
+  </data>
+  <data name="orodhaKataMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="orodhaKataMenu.Text" xml:space="preserve">
+    <value>Orodha Ya Kata</value>
+  </data>
+  <data name="orodhaMitaaVijijiMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="orodhaMitaaVijijiMenu.Text" xml:space="preserve">
+    <value>Orodha Ya Mitaa/Vijiji</value>
+  </data>
+  <data name="orodhaVyanzoMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="orodhaVyanzoMenu.Text" xml:space="preserve">
+    <value>Orodha Ya Vyanzo</value>
+  </data>
+  <data name="orodhaMaeneoMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="orodhaMaeneoMenu.Text" xml:space="preserve">
+    <value>Orodha Ya Maeneo</value>
+  </data>
+  <data name="orodhaMawakalaMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="orodhaMawakalaMenu.Text" xml:space="preserve">
+    <value>Orodha Ya Mawakala</value>
+  </data>
+  <data name="oRODHAYAWOTEToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="oRODHAYAWOTEToolStripMenuItem.Text" xml:space="preserve">
+    <value>Orodha Ya Wote</value>
+  </data>
+  <data name="wALIOTHAMINIWAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="wALIOTHAMINIWAToolStripMenuItem.Text" xml:space="preserve">
+    <value>Orodha Kwa Tathmini</value>
+  </data>
+  <data name="kUTOKANANATAREHEToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="kUTOKANANATAREHEToolStripMenuItem.Text" xml:space="preserve">
+    <value>Orodha Kwa Tarehe</value>
+  </data>
+  <data name="orodhaWalipaKodiMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="orodhaWalipaKodiMenu.Text" xml:space="preserve">
+    <value>Orodha Walipa Kodi</value>
+  </data>
+  <data name="orodhaVipimoMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="orodhaVipimoMenu.Text" xml:space="preserve">
+    <value>Orodha Vipimo</value>
+  </data>
+  <data name="vyanzoVyaMapatoTitleMenu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="vyanzoVyaMapatoTitleMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 20</value>
+  </data>
+  <data name="vyanzoVyaMapatoTitleMenu.Text" xml:space="preserve">
+    <value>VYANZO VYA MAPATO</value>
+  </data>
+  <data name="mAPATOToolStripMenuItem.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="wekaMapatoMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="wekaMapatoMenu.Text" xml:space="preserve">
+    <value>Weka Mapato</value>
+  </data>
+  <data name="andaaBillMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="andaaBillMenu.Text" xml:space="preserve">
+    <value>Andaa Hati Ya Madai</value>
+  </data>
+  <data name="kWATAREHEToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="kWATAREHEToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kwa Miamala</value>
+  </data>
+  <data name="kWAJUMLAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="kWAJUMLAToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kwa Jumla Ya Maeneo</value>
+  </data>
+  <data name="kWAMWAKAWAFEDHAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="kWAMWAKAWAFEDHAToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kwa Mwaka Wa Fedha</value>
+  </data>
+  <data name="taarifaZaMakusanyoMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="taarifaZaMakusanyoMenu.Text" xml:space="preserve">
+    <value>Taarifa Za Makusanyo</value>
+  </data>
+  <data name="taarifaZaWakusanyajiMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="taarifaZaWakusanyajiMenu.Text" xml:space="preserve">
+    <value>Taarifa Za Wakusanyaji</value>
+  </data>
+  <data name="aNGALIAMIAMALAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 22</value>
+  </data>
+  <data name="aNGALIAMIAMALAToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kwa Miamala</value>
+  </data>
+  <data name="kWAJUMLAVYANZOToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 22</value>
+  </data>
+  <data name="kWAJUMLAVYANZOToolStripMenuItem.Text" xml:space="preserve">
+    <value>Kwa Jumla Ya Vyanzo</value>
+  </data>
+  <data name="taarifaZaMapatoHalisiMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="taarifaZaMapatoHalisiMenu.Text" xml:space="preserve">
+    <value>Taarifa Za Mapato Halisi</value>
+  </data>
+  <data name="taarifaZawalipaKodiMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="taarifaZawalipaKodiMenu.Text" xml:space="preserve">
+    <value>Taarifa Za Walipa Kodi</value>
+  </data>
+  <data name="ulipajiWaMawakalaMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="ulipajiWaMawakalaMenu.Text" xml:space="preserve">
+    <value>Ulipaji Wa Mawakala/Walipa Kodi</value>
+  </data>
+  <data name="wekaMakisiomenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="wekaMakisiomenu.Text" xml:space="preserve">
+    <value>Andaa Makisio</value>
+  </data>
+  <data name="angaliaMakisioMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="angaliaMakisioMenu.Text" xml:space="preserve">
+    <value>Angalia Makisio</value>
+  </data>
+  <data name="taarifaZilizofutwaMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="taarifaZilizofutwaMenu.Text" xml:space="preserve">
+    <value>Taarifa Zilizofutwa</value>
+  </data>
+  <data name="mAPATOToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="mAPATOToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 20</value>
+  </data>
+  <data name="mAPATOToolStripMenuItem.Text" xml:space="preserve">
+    <value>MAPATO</value>
+  </data>
+  <data name="lEJAYAMAKUSANYOToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="lEJAYAMAKUSANYOToolStripMenuItem.Text" xml:space="preserve">
+    <value>Leja Ya Makusanyo</value>
+  </data>
+  <data name="lEJAYAMAPATOHALISIToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 22</value>
+  </data>
+  <data name="lEJAYAMAPATOHALISIToolStripMenuItem.Text" xml:space="preserve">
+    <value>Leja Ya Mapato Halisi</value>
+  </data>
+  <data name="lEJAKUUToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="lEJAKUUToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 20</value>
+  </data>
+  <data name="lEJAKUUToolStripMenuItem.Text" xml:space="preserve">
+    <value>LEJA KUU</value>
+  </data>
+  <data name="sajiliWatumiajiMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 22</value>
+  </data>
+  <data name="sajiliWatumiajiMenu.Text" xml:space="preserve">
+    <value>Sajili Watumiaji</value>
+  </data>
+  <data name="orodhaWatumiajiMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 22</value>
+  </data>
+  <data name="orodhaWatumiajiMenu.Text" xml:space="preserve">
+    <value>Orodha Watumiaji</value>
+  </data>
+  <data name="wATUMIAJIToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="wATUMIAJIToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 20</value>
+  </data>
+  <data name="wATUMIAJIToolStripMenuItem.Text" xml:space="preserve">
+    <value>WATUMIAJI</value>
+  </data>
+  <data name="angaliaTaarifaMsingiMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 22</value>
+  </data>
+  <data name="angaliaTaarifaMsingiMenu.Text" xml:space="preserve">
+    <value>Angalia Taarifa</value>
+  </data>
+  <data name="bADILINEMBOToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 22</value>
+  </data>
+  <data name="bADILINEMBOToolStripMenuItem.Text" xml:space="preserve">
+    <value>Badili Nembo Na Sahihi</value>
+  </data>
+  <data name="tAARIFAZAMSINGIToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="tAARIFAZAMSINGIToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 20</value>
+  </data>
+  <data name="tAARIFAZAMSINGIToolStripMenuItem.Text" xml:space="preserve">
+    <value>TAARIFA ZA MSINGI</value>
+  </data>
+  <data name="mainMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="mainMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>799, 24</value>
+  </data>
+  <data name="mainMenuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="mainMenuStrip.Text" xml:space="preserve">
+    <value>mainMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Name" xml:space="preserve">
+    <value>mainMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="taarifaFupiBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="taarifaFupiBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="taarifaFupiBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 144</value>
+  </data>
+  <data name="taarifaFupiBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 39</value>
+  </data>
+  <data name="taarifaFupiBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="taarifaFupiBtn.Text" xml:space="preserve">
+    <value>Taarifa Fupi  Ya Leo</value>
+  </data>
+  <data name="&gt;&gt;taarifaFupiBtn.Name" xml:space="preserve">
+    <value>taarifaFupiBtn</value>
+  </data>
+  <data name="&gt;&gt;taarifaFupiBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;taarifaFupiBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;taarifaFupiBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="makusanyoLeoLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="makusanyoLeoLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="makusanyoLeoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 203</value>
+  </data>
+  <data name="makusanyoLeoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>491, 60</value>
+  </data>
+  <data name="makusanyoLeoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="makusanyoLeoLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;makusanyoLeoLabel.Name" xml:space="preserve">
+    <value>makusanyoLeoLabel</value>
+  </data>
+  <data name="&gt;&gt;makusanyoLeoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;makusanyoLeoLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;makusanyoLeoLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="button1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 411</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>799, 33</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>799, 477</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAVqyqAE+enRBgv71dY8XDb2PFw25jxcNuY8XDbmPFw25jxcNuY8XDbmPFw25jxcNuY8XDb2C+
+        vV1Ml5YQVKalAHvv7QB14+JReu/t+Hvw7/978O7/e/Hu/3vx7v978O7/e/Du/3vw7v978O7/e/Du/3vw
+        7/967uz4cNrYUnnr6gBH9e8AR+rmYEbv6v9G8Ov/RfDr/0fn6/9H5+v/RvLq/0bw6/9G7+v/RvDr/0bw
+        6/9G8Ov/Ru/q/0Th3WFH8+4AAPHnAAXn3l8A7OP/Cerc/w/k2P8Co+v/BHXw/wHB6P8A6eP/AO7j/wDt
+        4/8A7OP/AOzj/wDr4v8E3tZgAO/mAADx5wAE599fBevg/0besP921I3/Stqw/yPI0P8SrOD/CbTm/wTN
+        5/8B4+b/AO3n/wDt5/8A6+P/BN7WYADv5gAA8ecABOfeXwHt4/8Gx7z/D7mr/yGag/8qqYv/KLaZ/yG3
+        qP8Xm6D/CpGj/wSQnP8Dlpv/Asfb/wTe2GAA7uYAAPHnAAXn3l8A7+b/A4iC/wVHQ/8Bl5L/AKym/wNs
+        Z/8FVVD/BH11/wR+d/8GQD3/BG5r/wO14/8F0thgAOjnAADx5wAF595fAO7l/wOinv8Efnj/BHx1/wOk
+        nf8DkYr/BG5p/wOjnP8B1cz/BHRt/wLDyP8DuOn/BNrWYADt5gAA8ecABejeXwHl5P8Hbez/BY7q/wLG
+        3P8B2tz/AOPb/wDk2f8A7eL/AOvk/wHU5P8Equr/AtLl/wTh1mAA7+YAAPHnAAXn3l8B6OP/BZnr/wd0
+        7/8IYPH/CGLx/wd07/8Gie3/BZfr/wWa6/8EpOr/AdPm/wDs4v8E3tZgAO/mAADx5wAF5t5fAOzj/wDv
+        4/8A7eP/AOHk/wDO5v8BwOf/Ab3n/wDI5v8A3OT/AOvj/wDt4/8A6+L/BN7WYADv5gA+9O4APurlYD3v
+        6f897+r/Pe/p/z3w6f898en/PfLp/z3y6f898en/PfDp/z3v6f897+r/Pe7p/zzh3GE+8uwAffTyAHvw
+        7k188vD2fPLw/3zy8P588vD+fPLw/nzy8P588vD+fPLw/nzy8P588vD+fPLw/3vx7/Z25+ZOfPHvAHvz
+        8QB68/ELevPxTHrz8V568/FdevPxXXrz8V168/FdevPxXXrz8V168/FdevPxXXrz8V568vBMd+3rC3jv
+        7QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA//8AAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIAB
+        AACAAQAA//8AAA==
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="&gt;&gt;vyanzoVyaMapatoTitleMenu.Name" xml:space="preserve">
+    <value>vyanzoVyaMapatoTitleMenu</value>
+  </data>
+  <data name="&gt;&gt;vyanzoVyaMapatoTitleMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sajiliKataMenu.Name" xml:space="preserve">
+    <value>sajiliKataMenu</value>
+  </data>
+  <data name="&gt;&gt;sajiliKataMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sajiliMtaaKijijiMenu.Name" xml:space="preserve">
+    <value>sajiliMtaaKijijiMenu</value>
+  </data>
+  <data name="&gt;&gt;sajiliMtaaKijijiMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;wekaVyanzoMenu.Name" xml:space="preserve">
+    <value>wekaVyanzoMenu</value>
+  </data>
+  <data name="&gt;&gt;wekaVyanzoMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;wekaMaeneoMenu.Name" xml:space="preserve">
+    <value>wekaMaeneoMenu</value>
+  </data>
+  <data name="&gt;&gt;wekaMaeneoMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sajiliWakalaMenu.Name" xml:space="preserve">
+    <value>sajiliWakalaMenu</value>
+  </data>
+  <data name="&gt;&gt;sajiliWakalaMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sajiliMlipaKodiMenu.Name" xml:space="preserve">
+    <value>sajiliMlipaKodiMenu</value>
+  </data>
+  <data name="&gt;&gt;sajiliMlipaKodiMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orodhaKataMenu.Name" xml:space="preserve">
+    <value>orodhaKataMenu</value>
+  </data>
+  <data name="&gt;&gt;orodhaKataMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orodhaMitaaVijijiMenu.Name" xml:space="preserve">
+    <value>orodhaMitaaVijijiMenu</value>
+  </data>
+  <data name="&gt;&gt;orodhaMitaaVijijiMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orodhaVyanzoMenu.Name" xml:space="preserve">
+    <value>orodhaVyanzoMenu</value>
+  </data>
+  <data name="&gt;&gt;orodhaVyanzoMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orodhaMaeneoMenu.Name" xml:space="preserve">
+    <value>orodhaMaeneoMenu</value>
+  </data>
+  <data name="&gt;&gt;orodhaMaeneoMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orodhaMawakalaMenu.Name" xml:space="preserve">
+    <value>orodhaMawakalaMenu</value>
+  </data>
+  <data name="&gt;&gt;orodhaMawakalaMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orodhaWalipaKodiMenu.Name" xml:space="preserve">
+    <value>orodhaWalipaKodiMenu</value>
+  </data>
+  <data name="&gt;&gt;orodhaWalipaKodiMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;oRODHAYAWOTEToolStripMenuItem.Name" xml:space="preserve">
+    <value>oRODHAYAWOTEToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;oRODHAYAWOTEToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;wALIOTHAMINIWAToolStripMenuItem.Name" xml:space="preserve">
+    <value>wALIOTHAMINIWAToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;wALIOTHAMINIWAToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;kUTOKANANATAREHEToolStripMenuItem.Name" xml:space="preserve">
+    <value>kUTOKANANATAREHEToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;kUTOKANANATAREHEToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orodhaVipimoMenu.Name" xml:space="preserve">
+    <value>orodhaVipimoMenu</value>
+  </data>
+  <data name="&gt;&gt;orodhaVipimoMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mAPATOToolStripMenuItem.Name" xml:space="preserve">
+    <value>mAPATOToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;mAPATOToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;wekaMapatoMenu.Name" xml:space="preserve">
+    <value>wekaMapatoMenu</value>
+  </data>
+  <data name="&gt;&gt;wekaMapatoMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;andaaBillMenu.Name" xml:space="preserve">
+    <value>andaaBillMenu</value>
+  </data>
+  <data name="&gt;&gt;andaaBillMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;taarifaZaMakusanyoMenu.Name" xml:space="preserve">
+    <value>taarifaZaMakusanyoMenu</value>
+  </data>
+  <data name="&gt;&gt;taarifaZaMakusanyoMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;kWATAREHEToolStripMenuItem.Name" xml:space="preserve">
+    <value>kWATAREHEToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;kWATAREHEToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;kWAJUMLAToolStripMenuItem.Name" xml:space="preserve">
+    <value>kWAJUMLAToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;kWAJUMLAToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;kWAMWAKAWAFEDHAToolStripMenuItem.Name" xml:space="preserve">
+    <value>kWAMWAKAWAFEDHAToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;kWAMWAKAWAFEDHAToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;taarifaZaWakusanyajiMenu.Name" xml:space="preserve">
+    <value>taarifaZaWakusanyajiMenu</value>
+  </data>
+  <data name="&gt;&gt;taarifaZaWakusanyajiMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;taarifaZaMapatoHalisiMenu.Name" xml:space="preserve">
+    <value>taarifaZaMapatoHalisiMenu</value>
+  </data>
+  <data name="&gt;&gt;taarifaZaMapatoHalisiMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aNGALIAMIAMALAToolStripMenuItem.Name" xml:space="preserve">
+    <value>aNGALIAMIAMALAToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;aNGALIAMIAMALAToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;kWAJUMLAVYANZOToolStripMenuItem.Name" xml:space="preserve">
+    <value>kWAJUMLAVYANZOToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;kWAJUMLAVYANZOToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;taarifaZawalipaKodiMenu.Name" xml:space="preserve">
+    <value>taarifaZawalipaKodiMenu</value>
+  </data>
+  <data name="&gt;&gt;taarifaZawalipaKodiMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ulipajiWaMawakalaMenu.Name" xml:space="preserve">
+    <value>ulipajiWaMawakalaMenu</value>
+  </data>
+  <data name="&gt;&gt;ulipajiWaMawakalaMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;wekaMakisiomenu.Name" xml:space="preserve">
+    <value>wekaMakisiomenu</value>
+  </data>
+  <data name="&gt;&gt;wekaMakisiomenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;angaliaMakisioMenu.Name" xml:space="preserve">
+    <value>angaliaMakisioMenu</value>
+  </data>
+  <data name="&gt;&gt;angaliaMakisioMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;taarifaZilizofutwaMenu.Name" xml:space="preserve">
+    <value>taarifaZilizofutwaMenu</value>
+  </data>
+  <data name="&gt;&gt;taarifaZilizofutwaMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lEJAKUUToolStripMenuItem.Name" xml:space="preserve">
+    <value>lEJAKUUToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;lEJAKUUToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lEJAYAMAKUSANYOToolStripMenuItem.Name" xml:space="preserve">
+    <value>lEJAYAMAKUSANYOToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;lEJAYAMAKUSANYOToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lEJAYAMAPATOHALISIToolStripMenuItem.Name" xml:space="preserve">
+    <value>lEJAYAMAPATOHALISIToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;lEJAYAMAPATOHALISIToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;wATUMIAJIToolStripMenuItem.Name" xml:space="preserve">
+    <value>wATUMIAJIToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;wATUMIAJIToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sajiliWatumiajiMenu.Name" xml:space="preserve">
+    <value>sajiliWatumiajiMenu</value>
+  </data>
+  <data name="&gt;&gt;sajiliWatumiajiMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orodhaWatumiajiMenu.Name" xml:space="preserve">
+    <value>orodhaWatumiajiMenu</value>
+  </data>
+  <data name="&gt;&gt;orodhaWatumiajiMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tAARIFAZAMSINGIToolStripMenuItem.Name" xml:space="preserve">
+    <value>tAARIFAZAMSINGIToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tAARIFAZAMSINGIToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;angaliaTaarifaMsingiMenu.Name" xml:space="preserve">
+    <value>angaliaTaarifaMsingiMenu</value>
+  </data>
+  <data name="&gt;&gt;angaliaTaarifaMsingiMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bADILINEMBOToolStripMenuItem.Name" xml:space="preserve">
+    <value>bADILINEMBOToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;bADILINEMBOToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

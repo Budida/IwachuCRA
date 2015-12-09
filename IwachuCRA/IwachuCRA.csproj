@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6CA90BF-97B0-470B-B5BB-7E8E1F3D6B58}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IwachuCRA</RootNamespace>
+    <AssemblyName>IwachuCRA</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://www.iwachu.co.tz/IwachuCRA/</UpdateUrl>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>IwachuCRA</ProductName>
+    <PublisherName>Iwachu Company Ltd</PublisherName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icra_logo_AaC_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7D52231F047AEA710D7DF8C4F237D79EBE6A5B06</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>IwachuCRA_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>IwachuCRA.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>D:\C# LIBRARIES\itextsharp-all-5.5.8\itextsharp-dll-core\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>D:\C# LIBRARIES\itextsharp-all-5.5.8\itextsharp-dll-xtra\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddActualIncomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddActualIncomeForm.Designer.cs">
+      <DependentUpon>AddActualIncomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AndaaBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AndaaBillForm.Designer.cs">
+      <DependentUpon>AndaaBillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AndaaMakisioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AndaaMakisioForm.Designer.cs">
+      <DependentUpon>AndaaMakisioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AngaliaMakisioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AngaliaMakisioForm.Designer.cs">
+      <DependentUpon>AngaliaMakisioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BadiliNemboForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BadiliNemboForm.Designer.cs">
+      <DependentUpon>BadiliNemboForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVariablesClass.cs" />
+    <Compile Include="LejaMapatoHalisiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LejaMapatoHalisiForm.Designer.cs">
+      <DependentUpon>LejaMapatoHalisiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LejaYaMakusanyoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LejaYaMakusanyoForm.Designer.cs">
+      <DependentUpon>LejaYaMakusanyoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakusanyoKwaJumlaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakusanyoKwaJumlaForm.Designer.cs">
+      <DependentUpon>MakusanyoKwaJumlaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakusanyoKwaMiamalaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakusanyoKwaMiamalaForm.Designer.cs">
+      <DependentUpon>MakusanyoKwaMiamalaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakusanyoKwaMwakaWaFedhaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakusanyoKwaMwakaWaFedhaForm.Designer.cs">
+      <DependentUpon>MakusanyoKwaMwakaWaFedhaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapatoHalisiKwaMiamalaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapatoHalisiKwaMiamalaForm.Designer.cs">
+      <DependentUpon>MapatoHalisiKwaMiamalaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrodhaKwaTareheForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrodhaKwaTareheForm.Designer.cs">
+      <DependentUpon>OrodhaKwaTareheForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrodhaMitaaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrodhaMitaaForm.Designer.cs">
+      <DependentUpon>OrodhaMitaaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrodhaVipimoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrodhaVipimoForm.Designer.cs">
+      <DependentUpon>OrodhaVipimoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrodhaWaliothaminiwaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrodhaWaliothaminiwaForm.Designer.cs">
+      <DependentUpon>OrodhaWaliothaminiwaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrodhaWalipaKodiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrodhaWalipaKodiForm.Designer.cs">
+      <DependentUpon>OrodhaWalipaKodiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrodhaWatumiajiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrodhaWatumiajiForm.Designer.cs">
+      <DependentUpon>OrodhaWatumiajiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrodhaYaKataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrodhaYaKataForm.Designer.cs">
+      <DependentUpon>OrodhaYaKataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrodhaYaMaeneoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrodhaYaMaeneoForm.Designer.cs">
+      <DependentUpon>OrodhaYaMaeneoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrodhaYaMawakalaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrodhaYaMawakalaForm.Designer.cs">
+      <DependentUpon>OrodhaYaMawakalaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrodhaYaVyanzoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrodhaYaVyanzoForm.Designer.cs">
+      <DependentUpon>OrodhaYaVyanzoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecoverPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecoverPasswordForm.Designer.cs">
+      <DependentUpon>RecoverPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterUserForm.Designer.cs">
+      <DependentUpon>RegisterUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SajiliChanzoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SajiliChanzoForm.Designer.cs">
+      <DependentUpon>SajiliChanzoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SajiliEneoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SajiliEneoForm.Designer.cs">
+      <DependentUpon>SajiliEneoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SajiliKataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SajiliKataForm.Designer.cs">
+      <DependentUpon>SajiliKataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SajiliMlipaKodiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SajiliMlipaKodiForm.Designer.cs">
+      <DependentUpon>SajiliMlipaKodiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SajiliMtaaKijijiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SajiliMtaaKijijiForm.Designer.cs">
+      <DependentUpon>SajiliMtaaKijijiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditWakalaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditWakalaForm.Designer.cs">
+      <DependentUpon>EditWakalaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SajiliWakalaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SajiliWakalaForm.Designer.cs">
+      <DependentUpon>SajiliWakalaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaarifaMapatoKwaJumlaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaarifaMapatoKwaJumlaForm.Designer.cs">
+      <DependentUpon>TaarifaMapatoKwaJumlaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaarifaZaMsingiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaarifaZaMsingiForm.Designer.cs">
+      <DependentUpon>TaarifaZaMsingiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaarifaZaWakusanyajiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaarifaZaWakusanyajiForm.Designer.cs">
+      <DependentUpon>TaarifaZaWakusanyajiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaarifaZaWalipaKodiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaarifaZaWalipaKodiForm.Designer.cs">
+      <DependentUpon>TaarifaZaWalipaKodiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaarifaZilizofutwaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaarifaZilizofutwaForm.Designer.cs">
+      <DependentUpon>TaarifaZilizofutwaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxPayersWakalaReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxPayersWakalaReportsForm.Designer.cs">
+      <DependentUpon>TaxPayersWakalaReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBasicSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBasicSettingsForm.Designer.cs">
+      <DependentUpon>UpdateBasicSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WakalaSourcesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WakalaSourcesForm.Designer.cs">
+      <DependentUpon>WakalaSourcesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web.cs" />
+    <EmbeddedResource Include="AddActualIncomeForm.resx">
+      <DependentUpon>AddActualIncomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AndaaBillForm.resx">
+      <DependentUpon>AndaaBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AndaaMakisioForm.resx">
+      <DependentUpon>AndaaMakisioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AngaliaMakisioForm.resx">
+      <DependentUpon>AngaliaMakisioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BadiliNemboForm.resx">
+      <DependentUpon>BadiliNemboForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LejaMapatoHalisiForm.resx">
+      <DependentUpon>LejaMapatoHalisiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LejaYaMakusanyoForm.resx">
+      <DependentUpon>LejaYaMakusanyoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakusanyoKwaJumlaForm.resx">
+      <DependentUpon>MakusanyoKwaJumlaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakusanyoKwaMiamalaForm.resx">
+      <DependentUpon>MakusanyoKwaMiamalaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakusanyoKwaMwakaWaFedhaForm.resx">
+      <DependentUpon>MakusanyoKwaMwakaWaFedhaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapatoHalisiKwaMiamalaForm.resx">
+      <DependentUpon>MapatoHalisiKwaMiamalaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrodhaKwaTareheForm.resx">
+      <DependentUpon>OrodhaKwaTareheForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrodhaMitaaForm.resx">
+      <DependentUpon>OrodhaMitaaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrodhaVipimoForm.resx">
+      <DependentUpon>OrodhaVipimoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrodhaWaliothaminiwaForm.resx">
+      <DependentUpon>OrodhaWaliothaminiwaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrodhaWalipaKodiForm.resx">
+      <DependentUpon>OrodhaWalipaKodiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrodhaWatumiajiForm.resx">
+      <DependentUpon>OrodhaWatumiajiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrodhaYaKataForm.resx">
+      <DependentUpon>OrodhaYaKataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrodhaYaMaeneoForm.resx">
+      <DependentUpon>OrodhaYaMaeneoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrodhaYaMawakalaForm.resx">
+      <DependentUpon>OrodhaYaMawakalaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrodhaYaVyanzoForm.resx">
+      <DependentUpon>OrodhaYaVyanzoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RecoverPasswordForm.resx">
+      <DependentUpon>RecoverPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterUserForm.resx">
+      <DependentUpon>RegisterUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SajiliChanzoForm.resx">
+      <DependentUpon>SajiliChanzoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SajiliEneoForm.resx">
+      <DependentUpon>SajiliEneoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SajiliKataForm.resx">
+      <DependentUpon>SajiliKataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SajiliMlipaKodiForm.resx">
+      <DependentUpon>SajiliMlipaKodiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SajiliMtaaKijijiForm.resx">
+      <DependentUpon>SajiliMtaaKijijiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditWakalaForm.resx">
+      <DependentUpon>EditWakalaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SajiliWakalaForm.resx">
+      <DependentUpon>SajiliWakalaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaarifaMapatoKwaJumlaForm.resx">
+      <DependentUpon>TaarifaMapatoKwaJumlaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaarifaZaMsingiForm.resx">
+      <DependentUpon>TaarifaZaMsingiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaarifaZaWakusanyajiForm.resx">
+      <DependentUpon>TaarifaZaWakusanyajiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaarifaZaWalipaKodiForm.resx">
+      <DependentUpon>TaarifaZaWalipaKodiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaarifaZilizofutwaForm.resx">
+      <DependentUpon>TaarifaZilizofutwaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxPayersWakalaReportsForm.resx">
+      <DependentUpon>TaxPayersWakalaReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBasicSettingsForm.resx">
+      <DependentUpon>UpdateBasicSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WakalaSourcesForm.resx">
+      <DependentUpon>WakalaSourcesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="IwachuCRA.pfx" />
+    <None Include="IwachuCRA_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{B691E011-1797-432E-907A-4D8C69339129}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CDO">
+      <Guid>{CD000000-8B95-11D1-82DB-00C04FB1625D}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icra_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filesave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dedsign1431812222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icra_logo_AaC_icon.ico" />
+    <None Include="Resources\pdf.png" />
+    <None Include="Resources\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
