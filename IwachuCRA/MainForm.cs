@@ -56,7 +56,7 @@ namespace IwachuCRA
             {
                 //setting main form title
                 this.Text = "Iwachu CRA - " + GlobalVariablesClass.username + "[" + GlobalVariablesClass.level + "]";
-                makusanyoLeoLabel.Text = "Makusanyo: " + String.Format("{0:0,0.00}", getTodaysCollections(modifiedSeconds)).ToString() + "   Mapato Halisi: " + String.Format("{0:0,0.00}", getTodaysActualIncome(modifiedSeconds)).ToString();
+               // makusanyoLeoLabel.Text = "Makusanyo: " + String.Format("{0:0,0.00}", getTodaysCollections(modifiedSeconds)).ToString() + "   Mapato Halisi: " + String.Format("{0:0,0.00}", getTodaysActualIncome(modifiedSeconds)).ToString();
                 copyRightLabel.Text = "iCRA | " + DateTime.Now.Year.ToString() + " © Iwachu Company Ltd";
             }
         }
@@ -418,6 +418,12 @@ namespace IwachuCRA
         {
             TaarifaZaMsingiForm frm = new TaarifaZaMsingiForm();
             frm.Show();
+        }
+
+        private void changePasswordBtn_Click(object sender, EventArgs e)
+        {
+            ChangePasswordForm frm = new ChangePasswordForm();
+            frm.ShowDialog();
         }
     }
 }

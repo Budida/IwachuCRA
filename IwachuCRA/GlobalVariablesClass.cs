@@ -25,8 +25,8 @@ namespace IwachuCRA
             level           = "";
         public static double makazi_percent = 0,
            biashara_percent = 0,
-           bmakazi_percent = 0,
-           riba_percent = 0,
+           bmakazi_percent  = 0,
+           riba_percent      = 0,
            limbikizo_percent = 0,
            limbikizo_mwezi = 0,
            riba_month = 0;

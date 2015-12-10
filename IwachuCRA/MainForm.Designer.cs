@@ -81,6 +81,7 @@
             this.taarifaFupiBtn = new System.Windows.Forms.Button();
             this.makusanyoLeoLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.changePasswordBtn = new System.Windows.Forms.Button();
             this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -461,11 +462,19 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // changePasswordBtn
+            // 
+            resources.ApplyResources(this.changePasswordBtn, "changePasswordBtn");
+            this.changePasswordBtn.Name = "changePasswordBtn";
+            this.changePasswordBtn.UseVisualStyleBackColor = true;
+            this.changePasswordBtn.Click += new System.EventHandler(this.changePasswordBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.Controls.Add(this.changePasswordBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.makusanyoLeoLabel);
             this.Controls.Add(this.taarifaFupiBtn);
@@ -535,5 +544,6 @@
         private System.Windows.Forms.ToolStripMenuItem kWAMWAKAWAFEDHAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aNGALIAMIAMALAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kWAJUMLAVYANZOToolStripMenuItem;
+        private System.Windows.Forms.Button changePasswordBtn;
     }
 }

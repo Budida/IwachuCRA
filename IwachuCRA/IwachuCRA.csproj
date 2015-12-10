@@ -27,7 +27,7 @@
     <ProductName>IwachuCRA</ProductName>
     <PublisherName>Iwachu Company Ltd</PublisherName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -123,6 +123,12 @@
     </Compile>
     <Compile Include="BadiliNemboForm.Designer.cs">
       <DependentUpon>BadiliNemboForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalVariablesClass.cs" />
     <Compile Include="LejaMapatoHalisiForm.cs">
@@ -358,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BadiliNemboForm.resx">
       <DependentUpon>BadiliNemboForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LejaMapatoHalisiForm.resx">
       <DependentUpon>LejaMapatoHalisiForm.cs</DependentUpon>

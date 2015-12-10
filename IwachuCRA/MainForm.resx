@@ -157,7 +157,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;copyRightLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="BottomToolStripPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -514,7 +514,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;mainMenuStrip.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="taarifaFupiBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -544,7 +544,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;taarifaFupiBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="makusanyoLeoLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -574,19 +574,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;makusanyoLeoLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
-  <data name="button1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
+  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
   <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 411</value>
+    <value>679, 411</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>799, 33</value>
+    <value>118, 33</value>
   </data>
   <data name="button1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -604,6 +604,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="changePasswordBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="changePasswordBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 411</value>
+  </data>
+  <data name="changePasswordBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 33</value>
+  </data>
+  <data name="changePasswordBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="changePasswordBtn.Text" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="&gt;&gt;changePasswordBtn.Name" xml:space="preserve">
+    <value>changePasswordBtn</value>
+  </data>
+  <data name="&gt;&gt;changePasswordBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changePasswordBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;changePasswordBtn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
