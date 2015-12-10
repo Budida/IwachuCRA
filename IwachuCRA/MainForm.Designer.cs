@@ -445,14 +445,16 @@
             // taarifaFupiBtn
             // 
             resources.ApplyResources(this.taarifaFupiBtn, "taarifaFupiBtn");
+            this.taarifaFupiBtn.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.taarifaFupiBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.taarifaFupiBtn.Name = "taarifaFupiBtn";
-            this.taarifaFupiBtn.UseVisualStyleBackColor = true;
+            this.taarifaFupiBtn.UseVisualStyleBackColor = false;
             this.taarifaFupiBtn.Click += new System.EventHandler(this.taarifaFupiBtn_Click);
             // 
             // makusanyoLeoLabel
             // 
             resources.ApplyResources(this.makusanyoLeoLabel, "makusanyoLeoLabel");
-            this.makusanyoLeoLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.makusanyoLeoLabel.BackColor = System.Drawing.SystemColors.Highlight;
             this.makusanyoLeoLabel.Name = "makusanyoLeoLabel";
             // 
             // button1
@@ -474,12 +476,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackgroundImage = global::IwachuCRA.Properties.Resources.icra_logo_modified;
             this.Controls.Add(this.changePasswordBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.makusanyoLeoLabel);
             this.Controls.Add(this.taarifaFupiBtn);
             this.Controls.Add(this.copyRightLabel);
             this.Controls.Add(this.mainMenuStrip);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);

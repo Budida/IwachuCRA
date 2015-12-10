@@ -563,6 +563,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icra_logo_AaC_icon.ico" />
+    <None Include="Resources\icra_logo_modified.png" />
+    <None Include="Resources\icra_logo1.png" />
+    <None Include="Resources\ourogo.png" />
     <None Include="Resources\pdf.png" />
     <None Include="Resources\undo.png" />
   </ItemGroup>

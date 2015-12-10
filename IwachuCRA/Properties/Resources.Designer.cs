@@ -123,6 +123,26 @@ namespace IwachuCRA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icra_logo_modified {
+            get {
+                object obj = ResourceManager.GetObject("icra_logo_modified", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icra_logo1 {
+            get {
+                object obj = ResourceManager.GetObject("icra_logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mini_edit {
             get {
                 object obj = ResourceManager.GetObject("mini_edit", resourceCulture);
@@ -136,6 +156,16 @@ namespace IwachuCRA.Properties {
         internal static System.Drawing.Bitmap money {
             get {
                 object obj = ResourceManager.GetObject("money", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ourogo {
+            get {
+                object obj = ResourceManager.GetObject("ourogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
