@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,7 @@ namespace IwachuCRA
         public MainForm()
         {
             InitializeComponent();
+            this.chartTypeDropDown.SelectedItem = "Column";
             this.FormClosing += MainForm_FormClosing;
             //disable some menus according to user level
             if (GlobalVariablesClass.level != "Admin" && GlobalVariablesClass.level !="DED")
@@ -137,11 +139,11 @@ namespace IwachuCRA
         private Double getTodaysCollections(Double currentTime)
         {
             Double todayIncome = 0;
-            MySql.Data.MySqlClient.MySqlConnection connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
+            MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-            MySql.Data.MySqlClient.MySqlCommand cmd = connection.CreateCommand();
+            MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandText = "SELECT * FROM income WHERE date = '" + currentTime + "' AND council_code ='" + GlobalVariablesClass.council_code + "' AND region_code='" + GlobalVariablesClass.region_code + "'";
-            MySql.Data.MySqlClient.MySqlDataReader myReader = cmd.ExecuteReader();
+            MySqlDataReader myReader = cmd.ExecuteReader();
             if (myReader.HasRows)
             {
                 while (myReader.Read())
@@ -154,11 +156,11 @@ namespace IwachuCRA
         private Double getTodaysActualIncome(Double currentTime)
         {
             Double todayIncome = 0;
-            MySql.Data.MySqlClient.MySqlConnection connection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
+            MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-            MySql.Data.MySqlClient.MySqlCommand cmd = connection.CreateCommand();
+            MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandText = "SELECT * FROM actual_income WHERE date = '" + currentTime + "' AND council_code ='" + GlobalVariablesClass.council_code + "' AND region_code='" + GlobalVariablesClass.region_code + "'";
-            MySql.Data.MySqlClient.MySqlDataReader myReader = cmd.ExecuteReader();
+            MySqlDataReader myReader = cmd.ExecuteReader();
             if (myReader.HasRows)
             {
                 while (myReader.Read())
@@ -424,6 +426,138 @@ namespace IwachuCRA
         {
             ChangePasswordForm frm = new ChangePasswordForm();
             frm.ShowDialog();
+        }
+
+        private double getSumIncomeMonth(int month, int yr)
+        {
+            double result = 0;
+            MySqlConnection connection = new MySqlConnection(GlobalVariablesClass.connString);
+            connection.Open();
+            try
+            {
+                MySqlCommand cmd = connection.CreateCommand();
+                cmd.CommandText = "SELECT SUM(amount) FROM actual_income WHERE month=" + month + " AND year=" + yr + " AND deleted='no'";
+                MySqlDataReader myReader = cmd.ExecuteReader();
+                if (myReader.HasRows)
+                {
+                    while (myReader.Read())
+                    {
+                        result = Double.Parse(myReader.GetString(0));
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                connection.Close();
+            }
+
+            return result;
+        }
+
+        private void loadChartBtn_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            string selectedchart = chartTypeDropDown.SelectedItem.ToString();
+            if (selectedchart == "Line")
+            {
+                summaryChart.Series["Mapato"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            }
+            else if (selectedchart == "Column")
+            {
+                summaryChart.Series["Mapato"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+            }
+            else if (selectedchart == "Pie")
+            {
+                summaryChart.Series["Mapato"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            }
+            else if (selectedchart == "Funnel")
+            {
+                summaryChart.Series["Mapato"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Funnel;
+            }
+            else if (selectedchart == "Area")
+            {
+                summaryChart.Series["Mapato"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            }
+            else if (selectedchart == "Bar")
+            {
+                summaryChart.Series["Mapato"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            }
+            else if (selectedchart == "Doughnut")
+            {
+                summaryChart.Series["Mapato"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            }
+            else if (selectedchart == "SplineArea")
+            {
+                summaryChart.Series["Mapato"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            }
+            else if (selectedchart == "Pyramid")
+            {
+                summaryChart.Series["Mapato"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pyramid;
+            }
+            else if (selectedchart == "BoxPlot")
+            {
+                summaryChart.Series["Mapato"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.BoxPlot;
+            }
+            //clear chart
+            foreach (var series in summaryChart.Series)
+            {
+                series.Points.Clear();
+            }
+            //load chart data
+            for (int i=1; i<=12; i++)
+            {
+                if (i == 1)
+                {
+                    summaryChart.Series["Mapato"].Points.AddXY("JAN",getSumIncomeMonth(i, DateTime.Now.Year));
+                }
+                else if (i == 2) {
+                    summaryChart.Series["Mapato"].Points.AddXY("FEB", getSumIncomeMonth(i, DateTime.Now.Year));
+                }
+                else if (i == 3)
+                {
+                    summaryChart.Series["Mapato"].Points.AddXY("MARCH", getSumIncomeMonth(i, DateTime.Now.Year));
+                }
+                else if (i == 4)
+                {
+                    summaryChart.Series["Mapato"].Points.AddXY("APRIL", getSumIncomeMonth(i, DateTime.Now.Year));
+                }
+                else if (i == 5)
+                {
+                    summaryChart.Series["Mapato"].Points.AddXY("MAY", getSumIncomeMonth(i, DateTime.Now.Year));
+                }
+                else if (i == 6)
+                {
+                    summaryChart.Series["Mapato"].Points.AddXY("JUN", getSumIncomeMonth(i, DateTime.Now.Year));
+                }
+                else if (i == 7)
+                {
+                    summaryChart.Series["Mapato"].Points.AddXY("JULY", getSumIncomeMonth(i, DateTime.Now.Year));
+                }
+                else if (i == 8)
+                {
+                    summaryChart.Series["Mapato"].Points.AddXY("AUG", getSumIncomeMonth(i, DateTime.Now.Year));
+                }
+                else if (i == 9)
+                {
+                    summaryChart.Series["Mapato"].Points.AddXY("SEPT", getSumIncomeMonth(i, DateTime.Now.Year));
+                }
+                else if (i == 10)
+                {
+                    summaryChart.Series["Mapato"].Points.AddXY("OCT", getSumIncomeMonth(i, DateTime.Now.Year));
+                }
+                else if (i == 11)
+                {
+                    summaryChart.Series["Mapato"].Points.AddXY("NOV", getSumIncomeMonth(i, DateTime.Now.Year));
+                }
+                else if (i == 12)
+                {
+                    summaryChart.Series["Mapato"].Points.AddXY("DEC", getSumIncomeMonth(i, DateTime.Now.Year));
+                }
+               
+            }
+            Cursor.Current = Cursors.Default;
         }
     }
 }

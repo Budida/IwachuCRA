@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.copyRightLabel = new System.Windows.Forms.Label();
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -82,7 +85,11 @@
             this.makusanyoLeoLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.changePasswordBtn = new System.Windows.Forms.Button();
+            this.summaryChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.loadChartBtn = new System.Windows.Forms.Button();
+            this.chartTypeDropDown = new System.Windows.Forms.ComboBox();
             this.mainMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summaryChart)).BeginInit();
             this.SuspendLayout();
             // 
             // copyRightLabel
@@ -471,12 +478,64 @@
             this.changePasswordBtn.UseVisualStyleBackColor = true;
             this.changePasswordBtn.Click += new System.EventHandler(this.changePasswordBtn_Click);
             // 
+            // summaryChart
+            // 
+            resources.ApplyResources(this.summaryChart, "summaryChart");
+            this.summaryChart.BackColor = System.Drawing.Color.Silver;
+            this.summaryChart.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
+            this.summaryChart.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+            this.summaryChart.BorderlineColor = System.Drawing.Color.Firebrick;
+            this.summaryChart.BorderlineWidth = 2;
+            chartArea1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DottedDiamond;
+            chartArea1.Name = "ChartArea1";
+            this.summaryChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.summaryChart.Legends.Add(legend1);
+            this.summaryChart.Name = "summaryChart";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series1.IsValueShownAsLabel = true;
+            series1.IsXValueIndexed = true;
+            series1.Legend = "Legend1";
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series1.Name = "Mapato";
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            this.summaryChart.Series.Add(series1);
+            // 
+            // loadChartBtn
+            // 
+            resources.ApplyResources(this.loadChartBtn, "loadChartBtn");
+            this.loadChartBtn.Name = "loadChartBtn";
+            this.loadChartBtn.UseVisualStyleBackColor = true;
+            this.loadChartBtn.Click += new System.EventHandler(this.loadChartBtn_Click);
+            // 
+            // chartTypeDropDown
+            // 
+            resources.ApplyResources(this.chartTypeDropDown, "chartTypeDropDown");
+            this.chartTypeDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.chartTypeDropDown.FormattingEnabled = true;
+            this.chartTypeDropDown.Items.AddRange(new object[] {
+            resources.GetString("chartTypeDropDown.Items"),
+            resources.GetString("chartTypeDropDown.Items1"),
+            resources.GetString("chartTypeDropDown.Items2"),
+            resources.GetString("chartTypeDropDown.Items3"),
+            resources.GetString("chartTypeDropDown.Items4"),
+            resources.GetString("chartTypeDropDown.Items5"),
+            resources.GetString("chartTypeDropDown.Items6"),
+            resources.GetString("chartTypeDropDown.Items7"),
+            resources.GetString("chartTypeDropDown.Items8"),
+            resources.GetString("chartTypeDropDown.Items9")});
+            this.chartTypeDropDown.Name = "chartTypeDropDown";
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackgroundImage = global::IwachuCRA.Properties.Resources.icra_logo_modified;
+            this.Controls.Add(this.chartTypeDropDown);
+            this.Controls.Add(this.loadChartBtn);
+            this.Controls.Add(this.summaryChart);
             this.Controls.Add(this.changePasswordBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.makusanyoLeoLabel);
@@ -484,12 +543,12 @@
             this.Controls.Add(this.copyRightLabel);
             this.Controls.Add(this.mainMenuStrip);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summaryChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -550,5 +609,8 @@
         private System.Windows.Forms.ToolStripMenuItem aNGALIAMIAMALAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kWAJUMLAVYANZOToolStripMenuItem;
         private System.Windows.Forms.Button changePasswordBtn;
+        private System.Windows.Forms.DataVisualization.Charting.Chart summaryChart;
+        private System.Windows.Forms.Button loadChartBtn;
+        private System.Windows.Forms.ComboBox chartTypeDropDown;
     }
 }

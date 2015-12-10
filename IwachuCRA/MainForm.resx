@@ -157,7 +157,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;copyRightLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="BottomToolStripPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -514,7 +514,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;mainMenuStrip.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="taarifaFupiBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -523,7 +523,7 @@
     <value>NoControl</value>
   </data>
   <data name="taarifaFupiBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 144</value>
+    <value>329, 40</value>
   </data>
   <data name="taarifaFupiBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 39</value>
@@ -544,7 +544,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;taarifaFupiBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="makusanyoLeoLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -553,10 +553,10 @@
     <value>NoControl</value>
   </data>
   <data name="makusanyoLeoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 203</value>
+    <value>155, 82</value>
   </data>
   <data name="makusanyoLeoLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>491, 60</value>
+    <value>491, 35</value>
   </data>
   <data name="makusanyoLeoLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -574,7 +574,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;makusanyoLeoLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -604,7 +604,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="changePasswordBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -634,6 +634,111 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;changePasswordBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="summaryChart.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="summaryChart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 120</value>
+  </data>
+  <data name="summaryChart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>654, 285</value>
+  </data>
+  <data name="summaryChart.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;summaryChart.Name" xml:space="preserve">
+    <value>summaryChart</value>
+  </data>
+  <data name="&gt;&gt;summaryChart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;summaryChart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;summaryChart.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="loadChartBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="loadChartBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 421</value>
+  </data>
+  <data name="loadChartBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="loadChartBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="loadChartBtn.Text" xml:space="preserve">
+    <value>Load Chart</value>
+  </data>
+  <data name="&gt;&gt;loadChartBtn.Name" xml:space="preserve">
+    <value>loadChartBtn</value>
+  </data>
+  <data name="&gt;&gt;loadChartBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;loadChartBtn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;loadChartBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chartTypeDropDown.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="chartTypeDropDown.Items" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="chartTypeDropDown.Items1" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="chartTypeDropDown.Items2" xml:space="preserve">
+    <value>Pie</value>
+  </data>
+  <data name="chartTypeDropDown.Items3" xml:space="preserve">
+    <value>Funnel</value>
+  </data>
+  <data name="chartTypeDropDown.Items4" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="chartTypeDropDown.Items5" xml:space="preserve">
+    <value>Bar</value>
+  </data>
+  <data name="chartTypeDropDown.Items6" xml:space="preserve">
+    <value>Doughnut</value>
+  </data>
+  <data name="chartTypeDropDown.Items7" xml:space="preserve">
+    <value>SplineArea</value>
+  </data>
+  <data name="chartTypeDropDown.Items8" xml:space="preserve">
+    <value>Pyramid</value>
+  </data>
+  <data name="chartTypeDropDown.Items9" xml:space="preserve">
+    <value>BoxPlot</value>
+  </data>
+  <data name="chartTypeDropDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>300, 422</value>
+  </data>
+  <data name="chartTypeDropDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 21</value>
+  </data>
+  <data name="chartTypeDropDown.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;chartTypeDropDown.Name" xml:space="preserve">
+    <value>chartTypeDropDown</value>
+  </data>
+  <data name="&gt;&gt;chartTypeDropDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chartTypeDropDown.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chartTypeDropDown.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
