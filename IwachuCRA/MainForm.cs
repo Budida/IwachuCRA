@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -14,6 +15,8 @@ namespace IwachuCRA
 {
     public partial class MainForm : Form
     {
+        static int maximum_year = DateTime.Now.Year;
+        static int min_year     = maximum_year - 10;
         public Form refFrmLogin { get; set; }
         string connectionString             = GlobalVariablesClass.connString;
         public static DateTime startDate    = new DateTime(1970, 1, 1);
@@ -26,7 +29,12 @@ namespace IwachuCRA
         public MainForm()
         {
             InitializeComponent();
+            yearDropDownItems();
             this.chartTypeDropDown.SelectedItem = "Column";
+            this.summaryChart.Visible           = false;
+            this.closeChartBtn.Visible          = false;
+            this.printChartbtn.Visible          = false;
+            this.yearsDropDown.SelectedItem     = DateTime.Now.Year.ToString();
             this.FormClosing += MainForm_FormClosing;
             //disable some menus according to user level
             if (GlobalVariablesClass.level != "Admin" && GlobalVariablesClass.level !="DED")
@@ -458,8 +466,11 @@ namespace IwachuCRA
 
         private void loadChartBtn_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
+            Cursor.Current  = Cursors.WaitCursor;
+            string year     = this.yearsDropDown.SelectedItem.ToString();
             string selectedchart = chartTypeDropDown.SelectedItem.ToString();
+            if (year.Length > 0)
+            {
             if (selectedchart == "Line")
             {
                 summaryChart.Series["Mapato"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -510,54 +521,123 @@ namespace IwachuCRA
             {
                 if (i == 1)
                 {
-                    summaryChart.Series["Mapato"].Points.AddXY("JAN",getSumIncomeMonth(i, DateTime.Now.Year));
+                    summaryChart.Series["Mapato"].Points.AddXY("JAN"+year,getSumIncomeMonth(i, int.Parse(year)));
                 }
                 else if (i == 2) {
-                    summaryChart.Series["Mapato"].Points.AddXY("FEB", getSumIncomeMonth(i, DateTime.Now.Year));
+                    summaryChart.Series["Mapato"].Points.AddXY("FEB" + year, getSumIncomeMonth(i, int.Parse(year)));
                 }
                 else if (i == 3)
                 {
-                    summaryChart.Series["Mapato"].Points.AddXY("MARCH", getSumIncomeMonth(i, DateTime.Now.Year));
+                    summaryChart.Series["Mapato"].Points.AddXY("MARCH" + year, getSumIncomeMonth(i, int.Parse(year)));
                 }
                 else if (i == 4)
                 {
-                    summaryChart.Series["Mapato"].Points.AddXY("APRIL", getSumIncomeMonth(i, DateTime.Now.Year));
+                    summaryChart.Series["Mapato"].Points.AddXY("APRIL" + year, getSumIncomeMonth(i, int.Parse(year)));
                 }
                 else if (i == 5)
                 {
-                    summaryChart.Series["Mapato"].Points.AddXY("MAY", getSumIncomeMonth(i, DateTime.Now.Year));
+                    summaryChart.Series["Mapato"].Points.AddXY("MAY" + year, getSumIncomeMonth(i, int.Parse(year)));
                 }
                 else if (i == 6)
                 {
-                    summaryChart.Series["Mapato"].Points.AddXY("JUN", getSumIncomeMonth(i, DateTime.Now.Year));
+                    summaryChart.Series["Mapato"].Points.AddXY("JUN" + year, getSumIncomeMonth(i, int.Parse(year)));
                 }
                 else if (i == 7)
                 {
-                    summaryChart.Series["Mapato"].Points.AddXY("JULY", getSumIncomeMonth(i, DateTime.Now.Year));
+                    summaryChart.Series["Mapato"].Points.AddXY("JULY" + year, getSumIncomeMonth(i, int.Parse(year)));
                 }
                 else if (i == 8)
                 {
-                    summaryChart.Series["Mapato"].Points.AddXY("AUG", getSumIncomeMonth(i, DateTime.Now.Year));
+                    summaryChart.Series["Mapato"].Points.AddXY("AUG" + year, getSumIncomeMonth(i, int.Parse(year)));
                 }
                 else if (i == 9)
                 {
-                    summaryChart.Series["Mapato"].Points.AddXY("SEPT", getSumIncomeMonth(i, DateTime.Now.Year));
+                    summaryChart.Series["Mapato"].Points.AddXY("SEPT" + year, getSumIncomeMonth(i, int.Parse(year)));
                 }
                 else if (i == 10)
                 {
-                    summaryChart.Series["Mapato"].Points.AddXY("OCT", getSumIncomeMonth(i, DateTime.Now.Year));
+                    summaryChart.Series["Mapato"].Points.AddXY("OCT" + year, getSumIncomeMonth(i, int.Parse(year)));
                 }
                 else if (i == 11)
                 {
-                    summaryChart.Series["Mapato"].Points.AddXY("NOV", getSumIncomeMonth(i, DateTime.Now.Year));
+                    summaryChart.Series["Mapato"].Points.AddXY("NOV" + year, getSumIncomeMonth(i, int.Parse(year)));
                 }
                 else if (i == 12)
                 {
-                    summaryChart.Series["Mapato"].Points.AddXY("DEC", getSumIncomeMonth(i, DateTime.Now.Year));
+                    summaryChart.Series["Mapato"].Points.AddXY("DEC" + year, getSumIncomeMonth(i, int.Parse(year)));
                 }
                
             }
+            this.summaryChart.Visible = true;
+            this.closeChartBtn.Visible = true;
+            this.printChartbtn.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Select Year");
+            }
             Cursor.Current = Cursors.Default;
+        }
+
+        private void closeChartBtn_Click(object sender, EventArgs e)
+        {
+            this.summaryChart.Visible = false;
+            this.closeChartBtn.Visible = false;
+            this.printChartbtn.Visible = false;
+        }
+
+        private void yearDropDownItems()
+        {
+           
+            while (maximum_year > min_year)
+            {
+                this.yearsDropDown.Items.Add(maximum_year.ToString());
+                maximum_year--;
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bmp = new Bitmap(summaryChart.Width, summaryChart.Height);
+            summaryChart.DrawToBitmap(bmp, new Rectangle(0, 0, summaryChart.Width, summaryChart.Height));
+            //e.Graphics.DrawImage(bmp, receiptPanel.Width, receiptPanel.Height);
+            //e.Graphics.DrawImage(bmp, e.PageBounds);
+            e.Graphics.DrawImage(bmp, e.MarginBounds);
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            summaryChart.CreateGraphics().DrawLines(new Pen(Color.Black), new Point[] { new Point(2, 2), new Point(2, 2) });
+        }
+        private void PrintChart(System.Windows.Forms.DataVisualization.Charting.Chart pnl)
+        {
+            try
+            {
+
+                PrintDialog myPrintDialog = new PrintDialog();
+                PrinterSettings values;
+                values = myPrintDialog.PrinterSettings;
+                myPrintDialog.Document = printDocument1;
+                printDocument1.PrintController = new StandardPrintController();
+                printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+                printDocument1.DefaultPageSettings.Landscape = true;
+                printPreviewDialog1.Document = printDocument1;
+                printPreviewDialog1.ShowDialog();
+                if (myPrintDialog.ShowDialog() == DialogResult.OK)
+                {
+                    printDocument1.Print();
+                    printDocument1.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void printChartbtn_Click(object sender, EventArgs e)
+        {
+            PrintChart(this.summaryChart);
         }
     }
 }

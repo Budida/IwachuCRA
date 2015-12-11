@@ -88,6 +88,12 @@
             this.summaryChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.loadChartBtn = new System.Windows.Forms.Button();
             this.chartTypeDropDown = new System.Windows.Forms.ComboBox();
+            this.closeChartBtn = new System.Windows.Forms.Button();
+            this.yearsDropDown = new System.Windows.Forms.ComboBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printChartbtn = new System.Windows.Forms.Button();
             this.mainMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summaryChart)).BeginInit();
             this.SuspendLayout();
@@ -489,14 +495,14 @@
             chartArea1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.DottedDiamond;
             chartArea1.Name = "ChartArea1";
             this.summaryChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
+            legend1.Name = "chartLegend";
             this.summaryChart.Legends.Add(legend1);
             this.summaryChart.Name = "summaryChart";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
             series1.IsValueShownAsLabel = true;
             series1.IsXValueIndexed = true;
-            series1.Legend = "Legend1";
+            series1.Legend = "chartLegend";
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
             series1.Name = "Mapato";
             series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
@@ -527,12 +533,45 @@
             resources.GetString("chartTypeDropDown.Items9")});
             this.chartTypeDropDown.Name = "chartTypeDropDown";
             // 
+            // closeChartBtn
+            // 
+            resources.ApplyResources(this.closeChartBtn, "closeChartBtn");
+            this.closeChartBtn.Name = "closeChartBtn";
+            this.closeChartBtn.UseVisualStyleBackColor = true;
+            this.closeChartBtn.Click += new System.EventHandler(this.closeChartBtn_Click);
+            // 
+            // yearsDropDown
+            // 
+            resources.ApplyResources(this.yearsDropDown, "yearsDropDown");
+            this.yearsDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.yearsDropDown.FormattingEnabled = true;
+            this.yearsDropDown.Name = "yearsDropDown";
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printPreviewDialog1
+            // 
+            resources.ApplyResources(this.printPreviewDialog1, "printPreviewDialog1");
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            // 
+            // printChartbtn
+            // 
+            resources.ApplyResources(this.printChartbtn, "printChartbtn");
+            this.printChartbtn.Name = "printChartbtn";
+            this.printChartbtn.UseVisualStyleBackColor = true;
+            this.printChartbtn.Click += new System.EventHandler(this.printChartbtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             resources.ApplyResources(this, "$this");
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackgroundImage = global::IwachuCRA.Properties.Resources.icra_logo_modified;
+            this.Controls.Add(this.printChartbtn);
+            this.Controls.Add(this.yearsDropDown);
+            this.Controls.Add(this.closeChartBtn);
             this.Controls.Add(this.chartTypeDropDown);
             this.Controls.Add(this.loadChartBtn);
             this.Controls.Add(this.summaryChart);
@@ -612,5 +651,11 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart summaryChart;
         private System.Windows.Forms.Button loadChartBtn;
         private System.Windows.Forms.ComboBox chartTypeDropDown;
+        private System.Windows.Forms.Button closeChartBtn;
+        private System.Windows.Forms.ComboBox yearsDropDown;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button printChartbtn;
     }
 }
